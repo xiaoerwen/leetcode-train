@@ -61,7 +61,7 @@ function solutionTwo(x) {
     // 从个位开始，个位转变为最高位，依次类推
     while (x >= 10) {
         y = y * 10 + x % 10;
-        x = Math.floor(x / 10);
+        x = parseInt(x / 10);
     }
     // 最高位不再取余，需额外步骤
     y = y * 10 + x;
