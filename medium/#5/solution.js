@@ -33,6 +33,8 @@ const longestPalindrome = s => {
                     maxLen = tmpLen;
                     palindromeStr = s.slice(i, j + 1);
                 }
+
+                break;
             }
         }
     }

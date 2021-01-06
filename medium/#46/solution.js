@@ -5,7 +5,7 @@
 
 const quanPailie = nums => {
     if (nums.length < 2) {
-        return nums;
+        return [nums];
     }
 
     let result = [];
