@@ -26,6 +26,7 @@ function isMatch(a, b) {
 
 /**
  * 字符串是否由有效括号组成，递归解法
+ * 耗时：116ms，内存消耗：45.7M
  *
  * @param {string} s 字符串
  * @return {boolean}
