@@ -1,6 +1,6 @@
 /**
  * @file 寻找有序数组中元素的起始位置与结束位置
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const searchRange = (nums, target) => {

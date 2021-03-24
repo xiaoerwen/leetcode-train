@@ -1,6 +1,6 @@
 /**
  * @file 字符串匹配解决方案2
- * @@author caixiaowen
+ * @@author xiaoerwen
  */
 
 /**

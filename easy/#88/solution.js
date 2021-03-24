@@ -1,6 +1,6 @@
 /**
  * @file 合并两个有序数组
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const merge = (nums1, m, nums2, n) => {

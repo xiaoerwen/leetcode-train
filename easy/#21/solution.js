@@ -1,6 +1,6 @@
 /**
  * @file 合并两个链表
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

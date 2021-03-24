@@ -1,6 +1,6 @@
 /**
  * @file 单链表
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
  // 单链表的节点

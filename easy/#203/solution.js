@@ -1,6 +1,6 @@
 /**
  * @file 移除链表中的元素
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

@@ -1,6 +1,6 @@
 /**
  * @file 堆排序
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const swap = (items, i, j) => {

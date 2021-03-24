@@ -1,6 +1,6 @@
 /**
  * @file 实现一个简单的消息订阅模式
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 // 发布者

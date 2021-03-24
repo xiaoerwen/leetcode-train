@@ -1,6 +1,6 @@
 /**
  * @file 生成括号
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

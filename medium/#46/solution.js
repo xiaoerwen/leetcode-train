@@ -1,6 +1,6 @@
 /**
  * @file 全排列
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const quanPailie = nums => {

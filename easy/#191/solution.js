@@ -1,6 +1,6 @@
 /**
  * @file 位1的个数
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const hammingWeight = function(n) {

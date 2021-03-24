@@ -1,6 +1,6 @@
 /**
  * @file 快排
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const wrap = (arr, i, j) => {

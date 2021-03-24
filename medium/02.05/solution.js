@@ -1,6 +1,6 @@
 /**
  * @file 链表求和
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 function ListNode(val) {

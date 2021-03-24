@@ -1,6 +1,6 @@
 /**
  * @file 爬楼梯
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const climbStairs = function(n) {

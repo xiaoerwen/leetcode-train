@@ -1,6 +1,6 @@
 /**
  * @file 双链表
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

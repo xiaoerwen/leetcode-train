@@ -1,6 +1,6 @@
 /**
  * @file 匹配字符规则
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const matchStrRegx = (s, p) => {

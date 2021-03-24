@@ -1,6 +1,6 @@
 /**
  * @file 构造最小堆
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const swap = (items, i, j) => {

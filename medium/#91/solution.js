@@ -1,6 +1,6 @@
 /**
  * @file 解码
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const numDecodings = s => {

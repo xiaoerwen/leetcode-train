@@ -1,6 +1,6 @@
 /**
  * @file 扁平化嵌套列表迭代器
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

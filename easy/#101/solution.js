@@ -1,6 +1,6 @@
 /**
  * @file 对称二叉树
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /** 

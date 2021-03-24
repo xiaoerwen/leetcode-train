@@ -1,6 +1,6 @@
 /**
  * @file 删除有序链表中的重复数字
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

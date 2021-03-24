@@ -1,6 +1,6 @@
 /**
  * @file 幂集
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

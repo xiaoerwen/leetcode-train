@@ -1,6 +1,6 @@
 /**
  * @file 最长回文字符串
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const isPalindrome = (s, i, j) => {

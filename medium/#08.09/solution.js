@@ -1,6 +1,6 @@
 /**
  * @file 括号
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const generateParenthesis = function(n) {

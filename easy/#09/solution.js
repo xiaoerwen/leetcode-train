@@ -1,6 +1,6 @@
 /**
  * @file 用两个栈实现队列
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 class CQueue {

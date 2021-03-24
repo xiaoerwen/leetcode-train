@@ -1,7 +1,7 @@
 
 /**
  * @file 滑动窗口最大值
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 /**

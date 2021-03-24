@@ -1,6 +1,6 @@
 /**
  * @file 电话号码字母的组合
- * @author caixiaowen
+ * @author xiaoerwen
  */
 
 const letterCombinations = digits => {
