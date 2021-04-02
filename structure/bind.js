@@ -1,11 +1,14 @@
-const fakeBind = function(func, context, ...args) {
-    if (typeof func !== 'function') {
+const fakeBind = function(context) {
+    if (typeof this !== 'function') {
         console.warn('not a function');
         return;
     }
 
+    let args = Array.prototype.slice.call(arguments, 1);
+    let self = this;
+
     return function() {
-        return func.apply(context, args);
+        return self.apply(context, args.concat(Array.prototype.slice.call(arguments)));
     };
 };
 
@@ -17,8 +20,8 @@ const a = {
 };
   
 const unboundGetX = a.getX;
-console.log(unboundGetX());
+console.log(unboundGetX()); // undefined
 
   
-const boundGetX = fakeBind(unboundGetX, a);
-console.log(boundGetX());
+const boundGetX = unboundGetX.bind(a);
+console.log(boundGetX()); // 42
