@@ -17,7 +17,7 @@ class Store {
 
         for (let getterName of Object.keys(getters)) {
             let getterFn = getters[getterName];
-            Object.defineProperties(getters, getterName, {
+            Object.defineProperty(getters, getterName, {
                 get() {
                     return getterFn(state)
                 }
