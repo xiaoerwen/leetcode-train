@@ -3,16 +3,16 @@
  * @author xiaoerwen
  */
 
-const promise = fn => {
+ function promise(fn) {
+    let that = this;
     this.status = 'pending';
     this.value = '';
     this.reason = '';
     this.onFulFilledCb = [];
     this.onRejectedCb = [];
-    let that = this;
 
     function resolve(value) {
-        setTimeout(() => {
+        //setTimeout(() => {
             if (that.status === 'pending') {
                 that.status = 'fulfilled';
                 that.value = value;
@@ -20,47 +20,67 @@ const promise = fn => {
                     item(that.value);
                 });
             }
-        }, 0);
+        //}, 0);
     }
 
     function reject(reason) {
-        setTimeout(() => {
-            if (thsta.status === 'pending') {
+        //setTimeout(() => {
+            if (that.status === 'pending') {
                 that.status = 'rejected';
                 that.reason = reason;
                 that.onRejectedCb.map(item => {
-                    item(reason);
+                    item(that.reason);
                 });
             }
-        }, 0);
+        //}, 0);
     }
 
     fn(resolve, reject);
 }
 
-promise.prototype.then = (onFulFilled, onRejected) => {
+promise.prototype.then = function(onFulFilled, onRejected) {
     let that = this;
+    console.log(that.status)
 
-    onFulFilled = typeof onFulFilled === 'function' ? onFulFilled : () => {};
-    onRejected = typeof onRejected === 'function' ? onRejected : () => {};
+    onFulFilled = typeof onFulFilled === 'function' ? onFulFilled : function(){};
+    onRejected = typeof onRejected === 'function' ? onRejected : function() {};
 
     return new promise((resolve, reject) => {
-        that.onFulFilledCb.push(value => {
-            try {
-                let x = onFulFilled(value);
-            }
-            catch (e) {
-                reject(e);
-            }
-        });
+      console.log(that.status)
+        if (that.status === 'pending') {
+            that.onFulFilledCb.push(value => {
+                try {
+                    let x = onFulFilled(value);
+                }
+                catch (e) {
+                    reject(e);
+                }
+            });
 
-        that.onRejectedCb.push(reason => {
-            try {
-                let x = onRejected(reason);
-            }
-            catch (e) {
-                reject(e);
-            }
-        })
+            that.onRejectedCb.push(reason => {
+                try {
+                    let x = onRejected(reason);
+                }
+                catch (e) {
+                    reject(e);
+                }
+            })
+        }
+        else if (that.status === 'fulfilled') {
+            onFulFilled(that.value);
+        }
+        else {
+            onRejected(that.value);
+        }
+        
     });
 };
+
+
+new promise((resolve, reject) => {
+  console.log(1)
+  resolve(2)
+})
+.then(res => {
+  console.log(res)
+});
