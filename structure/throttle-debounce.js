@@ -48,6 +48,8 @@ const throttle = (fn, wait) => {
         // 如果两者相差已经超过设定的时间间隔，执行函数
         if (endTime - startTime > wait) {
             fn.apply(context, args);
+            startTime = Date.now();
         }
     }
 };
+
