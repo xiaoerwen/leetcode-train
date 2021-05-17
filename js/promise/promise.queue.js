@@ -33,30 +33,27 @@
 const promiseQueue = function(promises) {
     let len = promises.length;
     let result = new Array(len);
-    return new Promise((resolve, reject) => {
-        let final = promises.reduceRight((accmulator, cur, index) => {
-            return function() {
-                return cur().then(res => {
-                    result[index] = res;
-                    return accmulator();
-                })
-                .catch(e => {
-                    reject(e)
-                });
-            };
-        });
-        final().then(res => {
-            result[len - 1] = res;
+    let p = Promise.resolve();
+    for (let i = 0; i < len; i++) {
+        p = p.then(() => {
+            return promises[i]().then(res => {
+                result[i] = res;
+                return res;
+            });
+        })
+    }
+    return new Promise(resolve => {
+        p.then(() => {
             resolve(result);
         });
-    })
+    });
 }
 
 const p1 = () => new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log('p1');
         resolve('p1');
-    }, 1000);
+    }, 3000);
 });
 
 const p2 = () => new Promise((resolve, reject) => {
@@ -70,7 +67,7 @@ const p3 = () => new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log('p3');
         resolve('p3');
-    }, 1000);
+    }, 3000);
 });
 
 promiseQueue([p1, p2, p3]).then(res => console.log('res', res));
